@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Portafolio - Tu Nombre</title>
+<style>
+  /* Fonts */
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+  /* Reset */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Roboto', sans-serif;
+    background: #121212;
+    color: #e0e0e0;
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+
+  a {
+    color: #00bfa6;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  a:hover {
+    color: #1de9b6;
+  }
+
+  header {
+    background: #1f1f1f;
+    padding: 20px 40px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.7);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  header h1 {
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: #00bfa6;
+    letter-spacing: 2px;
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+  }
+
+  nav ul li {
+    font-weight: 500;
+    font-size: 1rem;
+  }
+
+  main {
+    padding-top: 90px;
+  }
+
+  section {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 0 20px;
+  }
+
+  .hero {
+    text-align: center;
+    padding: 80px 20px 60px;
+  }
+
+  .hero h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #00bfa6;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+    color: #bdbdbd;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .projects {
+    margin-top: 40px;
+  }
+
+  .projects h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #00bfa6;
+    text-align: center;
+  }
+
+  .project-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    gap: 25px;
+  }
+
+  .project-item {
+    background: #222;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0,191,166,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+
+  .project-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px rgba(0,191,166,0.7);
+  }
+
+  .project-item h4 {
+    color: #1de9b6;
+    margin-bottom: 10px;
+  }
+
+  .project-item p {
+    color: #b0b0b0;
+    font-size: 0.95rem;
+  }
+
+  .about {
+    margin-top: 50px;
+    background: #1f1f1f;
+    padding: 30px 25px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,191,166,0.4);
+  }
+
+  .about h3 {
+    font-size: 2rem;
+    color: #00bfa6;
+    margin-bottom: 20px;
+  }
+
+  .about p {
+    font-size: 1.1rem;
+    color: #ccc;
+    line-height: 1.8;
+  }
+
+  .contact {
+    margin-top: 50px;
+    text-align: center;
+  }
+
+  .contact h3 {
+    font-size: 2rem;
+    color: #00bfa6;
+    margin-bottom: 20px;
+  }
+
+  .contact a {
+    font-size: 1.1rem;
+    display: inline-block;
+    background: #00bfa6;
+    color: #121212;
+    padding: 12px 30px;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0,191,166,0.6);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .contact a:hover {
+    background: #1de9b6;
+    box-shadow: 0 8px 20px rgba(29,233,182,0.8);
+  }
+
+  footer {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9rem;
+    color: #666;
+    border-top: 1px solid #2a2a2a;
+    margin-top: 80px;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 600px) {
+    .hero h2 {
+      font-size: 2.2rem;
+    }
+
+    nav ul {
+      gap: 18px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>TuNombre</h1>
+  <nav>
+    <ul>
+      <li><a href="#hero">Inicio</a></li>
+      <li><a href="#projects">Proyectos</a></li>
+      <li><a href="#about">Sobre mí</a></li>
+      <li><a href="#contact">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+  <section id="hero" class="hero">
+    <h2>Bienvenido a Mi Portafolio</h2>
+    <p>Soy un desarrollador apasionado por crear soluciones digitales modernas, eficientes y elegantes.</p>
+  </section>
+
+  <section id="projects" class="projects">
+    <h3>Proyectos Destacados</h3>
+    <div class="project-list">
+      <div class="project-item" tabindex="0">
+        <h4>Proyecto Uno</h4>
+        <p>Una aplicación web moderna utilizando React y Node.js que facilita la gestión de tareas.</p>
+      </div>
+      <div class="project-item" tabindex="0">
+        <h4>Proyecto Dos</h4>
+        <p>Una página de comercio electrónico con un diseño intuitivo y funcionalidad completa.</p>
+      </div>
+      <div class="project-item" tabindex="0">
+        <h4>Proyecto Tres</h4>
+        <p>Visualizaciones de datos interactivas y dinámicas con D3.js para análisis en tiempo real.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <h3>Sobre mí</h3>
+    <p>Tengo experiencia en desarrollo web, integración de APIs y diseño responsive. Me encanta aprender nuevas tecnologías y enfrentar desafíos que me permitan crecer profesionalmente.</p>
+  </section>
+
+  <section id="contact" class="contact">
+    <h3>Contacto</h3>
+    <a href="mailto:tu.email@ejemplo.com" aria-label="Enviar correo electrónico">Envíame un correo</a>
+  </section>
+
+</main>
+
+<footer>
+  &copy; 2024 Tu Nombre. Todos los derechos reservados.
+</footer>
+
+</body>
+</html>
+
